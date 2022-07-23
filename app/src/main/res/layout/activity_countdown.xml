@@ -4,34 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".Countdown">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This is Countdown Page"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        >
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/backCountdown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back"
-            android:textStyle="bold"
-            />
+        <TextView
+            android:id="@+id/countdown_textview"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:text="00:00:00"
+            android:textColor="#E2DCC8"
+            android:textSize="70dp"
+            android:gravity="bottom|center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="START" />
+
+            <Button
+                android:id="@+id/pauseButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Pause" />
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="RESET"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/backCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="15dp"/>
 
 </RelativeLayout>
